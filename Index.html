@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <button id="theme-toggle">Light Mode</button>
+    <title>My First Website</title>
+    <link rel="stylesheet" href="style.css">
+    <h1>Welcome to Victor Adukwu's portfolio</h1>
+    <p>Crafting Creative Web Solutions"
+.</p>
+    <a href="https://youtube.com" class="btn">Visit YouTube</a>
+  <img src="Unique_image (2).jpg" alt="My Unique Image">
+  <div class="carousel">
+  <div class="slides">
+    <img src="Modern_illustration_computer (1).jpg" alt="Modern_illustration_computer 2">
+    <img src="A_sleek_and_professional_image_that_conveys_modern.jpg" alt="A_sleek_and_professional_image_tha3" >
+  </div>
+  <div class="controls">
+    <button class="prev">❮</button>
+    <button class="next">❯</button>
+  </div>
+</div>
+  </body>
+  <script src="script.js" defer></script>
+</html>
+<nav class="navbar">
+  <div class="logo">Victor's Site</div>
+  <ul class="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</nav>
+<section id="home">
+    <h2>Home</h2>
+    <h2>WELCOME TO MY FIRST WEBPAGE. Scroll down to explore</p>
+</section>
+
+<section id="about">
+    <h2>About</h2>
+    <p>This webpage is my first step into the world of web development. Designed to showcase my learning journey, it combines creativity, structure, and interactive features. As I continue to grow in this field, this site will evolve, reflecting new skills and ideas. Explore, learn, and enjoy this space built with passion and purpose!
+</section>
+
+<section id="gallery">
+    <h2>Gallery</h2>
+    <img src="Unique_image (2).jpg" alt="Gallery Image">
+</section>
+
+<section id="contact">
+    <h2>Contact</h2>
+    <p>Email: Adcollections2030@gmail.com</p>
+</section>
+<footer>
+    <h2>© 2024 Victor Adukwu. All rights reserved.</p>
+</footer>
+<section id="welcome">
+  <h2>Welcome to My Website</h2>
+  <p>Welcome to My Online Home
+Hi, I'm Victor, a junior web developer with a passion for building innovative and user-friendly websites. I'm excited to share my journey, projects, and experiences with you..</p>
+</section>
+<section id="about">
+  <h2>About Me</h2>
+  <p>I am Victor Adukwu, and I’m learning web development.</p>
+</section>
+</section>
+</footer>
+<section id="contact" style="padding: 40px; background: #f9f9f9;">
+  <h2 style="text-align: center; font-family: Arial, sans-serif;">Contact Us</h2>
+  <div style="max-width: 600px; margin: auto;">
+    <form action=https://formspree.io/f/xblljkaz method="POST">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="message">Message:</label>
+    <textarea id="message" name="message" required></textarea>
+
+    <button type="submit">Send Message</button>
+</form>
+<script>
+  const hamburger = document.querySelector('.hamburger');
+  const navLinks = document.querySelector('.nav-links');
+
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+</script>
+<script> 
+  const slides = document.querySelector('.slides');
+  const prevButton = document.querySelector('.prev');
+  const nextButton = document.querySelector('.next');
+  let currentIndex = 0;
+
+  const updateCarousel = () => {
+    const slideWidth = slides.querySelector('img').clientWidth;
+    slides.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+  };
+
+  prevButton.addEventListener('click', () => {
+    currentIndex = (currentIndex > 0) ? currentIndex - 1 : slides.childElementCount - 1;
+    updateCarousel();
+  });
+
+  nextButton.addEventListener('click', () => {
+    currentIndex = (currentIndex < slides.childElementCount - 1) ? currentIndex + 1 : 0;
+    updateCarousel();
+  });
+
+  window.addEventListener('resize', updateCarousel);
+</script>
+<button id="scrollToTopBtn" title="Go to top">⬆️</button>
+<div class="animation-container">
+  <div class="animated-box"></div>
+</div>
+<div class="image-gallery">
+  <h2>Image Gallery</h2>
+  <div class="gallery-container">
+    <img src="image_part_1.jpg" alt="image_part_1" class="gallery-item">
+    <img src="image_part_2.jpg" alt="Image_part_2" class="gallery-item">
+    <img src="image_part_3.jpg" alt="Image_part_3" class="gallery-item">
+    <img src="premium_photo-1663013021590-c3d2ff59030b.jpeg" alt="premium_photo-1663013021590-c3d2f" class="gallery-item">
+  </div>
+</div>
+<div id="clock-container">
+  <p id="date"></p> <!-- Placeholder for the date -->
+  <p id="clock"></p> <!-- Placeholder for the clock -->
+<button id="scrollTopBtn" title="Go to top">↑</button>
